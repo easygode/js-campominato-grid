@@ -5,7 +5,7 @@
 
 //Functions
 
-function createElelemt (htmlElement, className, htmlValue){
+function createElement (htmlElement, className, htmlValue){
     const element = document.createElement(htmlElement);
     element.classList.add(className);
     element.innerText = htmlValue;
@@ -19,10 +19,17 @@ function appendElement(containerElement, htmlElement){
 
 //Main
 
-let cellNumber = 81;
+let cellNumber = 100;
 const containerBoard = document.querySelector('.board');
 
 for(let i = 1; i <= cellNumber; i++){
-    const createdElelemt = createElelemt('div', 'cell-81', i);
-    appendElement(containerBoard, createdElelemt);
+    const createdElement = createElement('div', 'cell-100', i);
+    appendElement(containerBoard, createdElement);
 }
+
+const button = document.querySelector('.play-btn');
+button.addEventListener('click', function() {
+    const play = document.querySelector('.cell-100');
+    play.classList.add('.show');
+})
+

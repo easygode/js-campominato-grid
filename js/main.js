@@ -29,7 +29,7 @@ for(let i = 1; i <= cellNumber; i++){
 
 const button = document.querySelector('.play-btn');
 button.addEventListener('click', function() {
-    const play = document.querySelector('.cell-100');
-    play.classList.add('.show');
+    const play = document.querySelector('.board');
+    play.classList.toggle('show');
 })
 
